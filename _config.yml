@@ -1,0 +1,14 @@
+# Site settings
+title: Peephole into my brain 
+email: besza.elte@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A lot of free time and a passion for CS.
+baseurl: "" # the subpath of your site, e.g. /blog/
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: beszab
+github_username: besza
+
+# Build settings
+markdown: kramdown
+
+highlighter: pygments
