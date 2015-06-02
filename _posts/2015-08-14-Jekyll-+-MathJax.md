@@ -1,0 +1,71 @@
+---
+layout: post
+title: "Jekyll + MathJax"
+category: hungarian
+---
+
+Bevezetés
+---------
+A [MathJax](http://docs.mathjax.org/en/latest/mathjax.html) nem más, mint egy JavaScript display engine LaTeX/MathML/AsciiMath jelölőnyelvekhez. 
+Ez ideális lehet azok számára akik tudományos szösszeneteket akarnak publikálni a HTML-alapú weboldalukon de
+nem akarnak elszakadni a LaTeX jelölőnyelv adta lehetőségektől.
+
+Demo
+----
+A Jekyll beállításairól röviden csak annyit, hogy a *_config.yml* fájlban állítsuk a markdown parsert kramdown-ra,
+ami támogatja a LaTeX-et.
+
+    markdown: kramdown
+
+Ezt követően nincs más dolgunk csak egy 
+{% highlight html %}
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{% endhighlight %}
+hivatkozással lekérni a hivatalos MathJax CDN-ről a legfrissebb verziót.
+
+Tekintsük az alábbi [LaTeX forrást](http://kramdown.gettalong.org/syntax.html#math-blocks): 
+{% highlight latex %}
+$$
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
+{% endhighlight %}
+
+És az eredmény:
+
+$$
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
+
+További olvasnivalók:
+
+- <http://docs.mathjax.org/en/latest/start.html>
+- <http://jekyllrb.com>
+- <http://www.latex-project.org/>
