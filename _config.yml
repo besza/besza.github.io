@@ -1,10 +1,13 @@
 # Site settings
 title: Peephole into my brain 
 description: > # this means to ignore newlines until "baseurl:"
-  A lot of free time and a passion for CS.
+  A lot of free time and a passion for Computer Science.
 baseurl: "" # the subpath of your site, e.g. /blog/
 github_username: besza
-
+url: http://besza.github.io
 # Build settings
 markdown: kramdown
-highlighter: pygments
+kramdown:
+  input: GFM
+  syntax_highlighter: rogue
+
