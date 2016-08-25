@@ -94,12 +94,11 @@ class ExampleSpec extends FlatSpec with Matchers {
 }
 ```
 
-[sbt clean test]({{ site.url }}/pics/sbt_test.png)
-
 Irodalomjegyzék
 ---------------
 
   1. [Sardinas-Patterson like algorithms in coding theory](http://www.engr.uconn.edu/~bop04002/data/licenta.pdf), Bogdan Pasaniuc, Iasi, 2013
   1. Bevezetés a matematikába, Járai Antal, Budapest, 2009
+  1. [Wikipedia szócikk](https://en.wikipedia.org/wiki/Sardinas%E2%80%93Patterson_algorithm)
 
 
